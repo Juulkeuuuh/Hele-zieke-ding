@@ -41,9 +41,31 @@ h5{
     left: 5vw;
     top: 50%;
     translate: 0 -50%;
-    display: none;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.logotje{
+    position: absolute;
+    width: 4vw;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: all 1s ease;
 }
 
+.st0{
+    fill: rgb(0, 0, 0);
+}
+
+.zuydPrent{
+    display: none;
+}
+.acdcPrent{
+    display: none;
+}
+.legoPrent{
+    display: none;
+}
 
 .cls-1 {
     fill: #000000;
@@ -92,6 +114,7 @@ h2{
     translate: -50% -50%;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     align-items: flex-start;
     align-content: flex-start;
 }
@@ -109,10 +132,10 @@ div.text{
     translate: -50% -50%;
     text-align: center;
 }
-.input{
+.input,select{
     height: 71.4px;
     box-sizing: border-box;
-    padding: 21px 34px;
+    padding: 21px 5px;
     font-size: 22px;
     border-radius: 12px;
     border: 4;
@@ -123,7 +146,7 @@ div.text{
     border-radius: 20px;
     display: block;
     overflow: hidden;
-    margin-right: 20px;
+    width: 200px;
 }
 
 .colourbar{
@@ -134,7 +157,7 @@ div.text{
 
 .button{
     background: #E3000B;
-    width: 148px;
+    /* width: 148px; */
     cursor: pointer;
     color: white;
     border-radius: 20px;

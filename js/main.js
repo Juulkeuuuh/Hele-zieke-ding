@@ -25,7 +25,7 @@ function nome() {
     localStorage.setItem('naam', naam);
     $('h5').html(naam);
     $('html, body').animate({ scrollTop: $('#scene-2').offset().top }, 'slow');
-    $('.guy').css('display', 'block');
+    $('.guy').css('opacity', '100');
 }
  function kleurtjes() {
     let colour1 =  $("#colour1").val();
@@ -42,8 +42,18 @@ function nome() {
  }
 
 function leef() {
-    const leeftijd = $( "#age" ).val();
-    localStorage.setItem('age', leeftijd);
+    const prent = $( "#prent" ).val();
+    localStorage.setItem('prent', prent);
+    const prentKleur = $( "#prentKleur" ).val();
+    localStorage.setItem('prentKleur', prentKleur);
+    if (prent == 'zuyd') { 
+        $('.zuydPrent').css('display', 'block')
+    } else if (prent == 'acdc'){
+        $('.acdcPrent').css('display', 'block')
+    } else {
+        $('.legoPrent').css('display', 'block')
+    }
+    $('.st0').css('fill', prentKleur)
     $('html, body').animate({ scrollTop: $('#scene-4').offset().top }, 'slow');
 }
 
@@ -51,7 +61,12 @@ function clearStorage() {
     localStorage.clear();
     $("body").css('background', '#F7F7FF');
     $('html, body').animate({ scrollTop: $('#scene-0').offset().top }, 'slow');
-    $('.guy').css('display', 'none');
+    $('.guy').css('opacity', '0');
+    $(".logo").css('width', '60vw');
+    $('.zuydPrent').css('display', 'none')
+    $('.acdcPrent').css('display', 'none')
+    $('.legoPrent').css('display', 'none')
+
 }
 
 
