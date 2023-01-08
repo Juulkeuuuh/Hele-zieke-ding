@@ -46,16 +46,52 @@ function leef() {
     localStorage.setItem('prent', prent);
     const prentKleur = $( "#prentKleur" ).val();
     localStorage.setItem('prentKleur', prentKleur);
-    if (prent == 'zuyd') { 
+    if (prent == 'Zuyd') { 
         $('.zuydPrent').css('display', 'block')
-    } else if (prent == 'acdc'){
+    } else if (prent == 'AC/DC'){
         $('.acdcPrent').css('display', 'block')
     } else {
         $('.legoPrent').css('display', 'block')
     }
     $('.st0').css('fill', prentKleur)
+    $('#textInputted').html('Zo dus jij vindt ' + prent + ' leuk? <br><br> Je komt aan bij een grot. Hier zou het gouden steentje moeten liggen. Je krijgt hier de keuze om naar links of naar rechts te gaan.')
     $('html, body').animate({ scrollTop: $('#scene-4').offset().top }, 'slow');
 }
+
+function toLeft(){
+    $('html, body').animate({ scrollTop: $('#scene-5').offset().top }, 'slow');
+    $('#textInputtedLR').html('Je loopt naar links en hoort in de verte een geluid, vreemd. Zou het een engelen geluid zijn, zou dit de juiste weg naar het gouden steentje zijn?')
+    $('#wrong').css('display', 'none')
+    $('.lastig').addClass('loser');
+    $('.lastig').html('GA TERUG');
+    $('#probeer').html('En of dat dit een engelengeluid was. Je loopt de hoek om en ziet de enige echte Jerome Gelissen zijn Japanse versie van Loco Loco zingen! Maar helaas... Geen gouden steentje.')
+
+}
+
+function toRight(){
+    $('html, body').animate({ scrollTop: $('#scene-5').offset().top }, 'slow');
+    $('#textInputtedLR').html('Je loopt naar rechts het is heel donker, in de verte zie je licht, het lijkt er op dat dit de juiste weg is.')
+    $('.lastig').removeClass('loser');
+    $('.lastig').html('GO');
+    $('#probeer').html('Je loopt de rechterkant op. Er heerst een gouden gloed over de gehele kamer, echter zit er hekwerk rondom het blokje. Jawel, het gouden blokje is in zicht!')
+
+}
+
+function toSixth(){
+    $('html, body').animate({ scrollTop: $('#scene-6').offset().top }, 'slow');
+}
+
+$('.lastig').click(function () {
+    if ($(this).hasClass('loser')) {
+        $('html, body').animate({ scrollTop: $('#scene-4').offset().top }, 'slow');
+    } else {
+        $('html, body').animate({ scrollTop: $('#scene-7').offset().top }, 'slow');
+    }
+})
+
+
+
+
 
 function clearStorage() {
     localStorage.clear();
@@ -66,6 +102,7 @@ function clearStorage() {
     $('.zuydPrent').css('display', 'none')
     $('.acdcPrent').css('display', 'none')
     $('.legoPrent').css('display', 'none')
+    $('#wrong').css('display', 'block')
 
 }
 

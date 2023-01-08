@@ -88,20 +88,48 @@
         </div>
         <div class="bar">
             <select id="prent">
-                <option value="zuyd">ZUYD logo</option>
-                <option value="acdc">AC/DC logo</option>
-                <option value="lego">LEGO logo</option>
+                <option value="Zuyd">ZUYD logo</option>
+                <option value="AC/DC">AC/DC logo</option>
+                <option value="Lego">LEGO logo</option>
             </select>
             <input class="input colourbar" type="color" id="prentKleur" value="#ffffff" list="presetColors">
-            <button class="button" onclick="leef()">1</button>
+            <button class="button" onclick="leef()">DOOR</button>
 
         </div>
     </div>
 
     <div id="scene-4" class="scene">
         <div class="text">
-            <h1>Tot dusver!</h1>
-            <p>Er word nog verder aangevuld.</p>
+            <p id="textInputted"></p>
+        </div>
+        <div class="bar">
+            <button class="button" id="wrong" onclick="toLeft()">LINKS</button>
+            <button class="button" onclick="toRight()">RECHTS</button>
+        </div>
+    </div>
+
+    <div id="scene-5" class="scene">
+        <div class="text">
+            <p id="textInputtedLR"></p>
+        </div>
+        <div class="bar">
+            <button class="button" onclick="toSixth()">LOOP DOOR</button>
+        </div>
+    </div>
+
+    <div id="scene-6" class="scene">
+        <div class="text">
+            <p id="probeer"></p>
+        </div>
+        <div class="bar">
+            <button class="button lastig" >LOOP DOOR</button>
+        </div>
+    </div>
+
+
+    <div id="scene-7" class="scene">
+        <div class="text">
+            <p>Je loopt op het slot af en merkt dat het dicht zit en herkent het icoontje dat op het slot staat. Het is een ster met daarrond een rechthoek. Er is maar één plek waar je dit ziet. Natuurlijk! Het stadhuis op de Markt! Dit is de vlag van Maastricht! Helaas houd deze textventure er voor nu op... Opnieuw spelen?</p>
         </div>
         <div class="bar">
             <button class="button" onclick="clearStorage()">HERSTART</button>
