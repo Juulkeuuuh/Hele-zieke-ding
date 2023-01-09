@@ -1,19 +1,14 @@
 
 
 //storage shit
-var numKeys = localStorage.length;
 const keyNaam = localStorage.getItem('naam');
 const keyColour = localStorage.getItem('colour');
 if (keyColour) {
     $('#colourText').html(keyColour+'?! I like that colour too!');
     $("body").css('background', keyColour);
 }
-const keyAge = localStorage.getItem('age');
-if (numKeys > 1) {
-    $('html, body').animate({ scrollTop: $('#scene-'+numKeys).offset().top }, 'slow');
-} else {
     $('html, body').animate({ scrollTop: $('#scene-'+0).offset().top }, 'slow');
-}
+
 
 function start(){
     $('html, body').animate({ scrollTop: $('#scene-1').offset().top }, 'slow');
